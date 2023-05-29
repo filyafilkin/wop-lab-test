@@ -1,0 +1,35 @@
+@import "variebles";
+@import "breakpoints";
+
+.header {
+  margin-bottom: 40px;
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 180px;
+    width: 100%;
+  }
+
+  &__number {
+    font-family: $monserrat;
+    font-size: 22px;
+    text-decoration: none;
+    color: $black;
+    transition: $transition;
+
+    &:visited {
+      color: $black;
+    }
+
+    &:hover {
+      color: $green;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+$full_width: 1920px;
+$extra_width: 1600px;
+$macbook15_width: 1440px;
+$macbook13_width: 1330px;
+$desktop_width: 1280px;
+$middle_width: 1024px;
+$tablet_width: 991px;
+$mobile_width: 767px;
+$small_width: 480px;
+$rotate_phone: 500px;
+
+@mixin media($res) {
+  @if rotate-phone==$res {
+    @media only screen and (max-height: $rotate_phone) {
+      @content;
+    }
+  }
+  @if small==$res {
+    @media only screen and (max-width: $small_width) {
+      @content;
+    }
+  }
+  @if mobile==$res {
+    @media only screen and (max-width: $mobile_width) {
+      @content;
+    }
+  }
+  @if tablet==$res {
+    @media only screen and (max-width: $tablet_width) {
+      @content;
+    }
+  }
+  @if middle==$res {
+    @media only screen and (max-width: $middle_width) {
+      @content;
+    }
+  }
+  @if desktop==$res {
+    @media only screen and (max-width: $desktop_width) {
+      @content;
+    }
+  }
+  @if macbook13==$res {
+    @media only screen and (max-width: $macbook13_width) {
+      @content;
+    }
+  }
+  @if macbook15==$res {
+    @media only screen and (max-width: $macbook15_width) {
+      @content;
+    }
+  }
+  @if extra==$res {
+    @media only screen and (max-width: $extra_width) {
+      @content;
+    }
+  }
+  @if fullsize==$res {
+    @media only screen and (min-width: $full_width) {
+      @content;
+    }
+  }
+}

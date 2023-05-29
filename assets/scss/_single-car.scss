@@ -1,0 +1,50 @@
+@import "variebles";
+
+.single-car {
+  &__inner {
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: $monserrat;
+    font-size: 56px;
+    text-align: center;
+    @include media(tablet) {
+      font-size: 42px;
+    }
+  }
+
+  &__img img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-family: $monserrat;
+    font-size: 24px;
+    margin-bottom: 10px;
+
+    @include media(tablet) {
+      font-size: 18px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  &__color {
+    width: 40px;
+    height: 20px;
+  }
+}
